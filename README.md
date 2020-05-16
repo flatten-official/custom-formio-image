@@ -18,10 +18,13 @@ All environment variables to be fetched from GCP Secret Manager need to have a v
 
 Prerequisites : Install and start docker.
 
-1. Create a service account and download its credentials file in the working directory. 
+1. Create a service account and download its credentials file. 
 (DO NOT use an existing service account, it's easy to mistakenly push the credentials to GitHub)
 
 2. Give the service account read permissions on the secret.
+
+3. Place the credentials file in this working directory and
+uncomment the `COPY` command in `Dockerfile`.
 
 3. Build the image: `docker build -t custom-formio .`
 
@@ -31,7 +34,7 @@ Prerequisites : Install and start docker.
     docker container run \
         -d
         --rm
-        -e GOOGLE_APPLICATION_CREDENTIALS=./credentials.json
+        -e GOOGLE_APPLICATION_CREDENTIALS=/src/credentials.json
         -p 80:80
         custom-formio
     ```
