@@ -17,6 +17,7 @@ async function main() {
 
     for (let key in payload) {
         if (payload.hasOwnProperty(key) && process.env[key] === KEY_WORD) {
+            console.log(`Loading ${key} from Secret Manager`);
             process.env[key] = payload[key];
         }
     }
