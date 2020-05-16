@@ -17,6 +17,6 @@ steps:
       - '$_REGION' # Set in trigger
       - '--platform'
       - 'managed'
-      - 'allow-unauthenticated'
+      - '--allow-unauthenticated'
 images:
   - gcr.io/$PROJECT_ID/custom-formio-$BRANCH_NAME
