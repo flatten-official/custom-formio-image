@@ -13,10 +13,10 @@ steps:
       - 'formio-$BRANCH_NAME'
       - '--image'
       - 'gcr.io/$PROJECT_ID/custom-formio-$BRANCH_NAME'
-      - '--region'
-      - '$_REGION' # Set in trigger
-      - '--platform'
-      - 'managed'
-      - '--allow-unauthenticated'
+#      - '--region'
+#      - '$_REGION' # Set in trigger
+#      - '--platform'
+#      - 'managed'
+#      - '--allow-unauthenticated'
 images:
   - gcr.io/$PROJECT_ID/custom-formio-$BRANCH_NAME

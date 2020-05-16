@@ -41,3 +41,8 @@ uncomment the `COPY` command in `Dockerfile`.
 1. Add your environment variable to the `secrets.js` list (if not already there).
 
 2. Update the secret in GCP Secret Manager by adding your environment variable to the JSON.
+
+## Deploying
+
+Committing to master or staging will automatically build the image,
+upload it to the container registry, and deploy a new version of the cloud run instance.
