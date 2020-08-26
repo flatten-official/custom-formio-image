@@ -48,10 +48,3 @@ uncomment the `COPY` command in `Dockerfile`.
 1. Add the environment variable to cloud run and set the value to `fromSecret`.
 
 2. Update the secret in GCP Secret Manager by adding your environment variable to the JSON.
-
-## Deploying
-
-Committing to master or staging will automatically build the image and
-upload it to the container registry.
-
-You then need to manually redeploy the image in Cloud Run.
